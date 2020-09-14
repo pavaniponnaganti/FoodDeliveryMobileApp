@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-icon class="back-btn" slot="start" name="arrow-back-outline" (click)="backsignin()"></ion-icon>
+    <ion-title class="ion-title" >Sign up</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h6 class="sign-in-heading">Personal Information</h6>
+  <form [formGroup]="registerForm">
+
+  <div class="input-div">
+    <ion-item>
+      <span item-right><ion-icon name="person"></ion-icon></span>
+      <ion-input class="text" [(ngModel)]="loginmodel.name" formControlName="name" placeholder="Your Name" type="name"></ion-input>
+    </ion-item>  
+  </div>
+  <div class="input-div">
+    <ion-item>
+      <span item-right><ion-icon name="mail"></ion-icon></span>
+      <ion-input class="input-email" [(ngModel)]="loginmodel.email" formControlName="email" placeholder="Email" type="email"></ion-input>
+    </ion-item>  
+  </div>
+  
+  <div class="input-div">
+    <ion-item>
+      <span item-right><ion-icon name="lock-closed"></ion-icon></span>
+      <ion-input class="input-email" [(ngModel)]="loginmodel.password" formControlName="password" placeholder="Password" type="password"></ion-input>
+    </ion-item>  
+  </div>
+
+  <div class="input-div">
+    <ion-item>
+      <span item-right><ion-icon name="phone-portrait-outline"></ion-icon></span>
+      <ion-input class="input-email" [(ngModel)]="loginmodel.phonenumber" formControlName="phonenumber" placeholder="Phone" type="number"></ion-input>
+    </ion-item>  
+  </div>
+  
+  <ion-button [disabled]="registerForm.invalid" class="login-btn" (click)="registerInfo(loginmodel)">Signup</ion-button>
+
+</form>
+</ion-content>

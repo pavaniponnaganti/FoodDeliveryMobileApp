@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-icon class="back-btn" slot="start" name="arrow-back-outline" (click)="backtologinpage()"></ion-icon>
+    <ion-title class="ion-title" >Forgot Password</ion-title>
+  </ion-toolbar>
+</ion-header>
+   
+<ion-content>
+  <ion-card *ngIf="!isShowPassword">
+    <ion-card-content>
+      <h6 class="forgot-header">Forgot Your Password??</h6>
+      <p class="forgot-pass" >Don't worry you can reset here...</p>
+      <div>
+        <ion-item class="ion-no-padding">
+          <!-- <span item-right><ion-icon name="mail"></ion-icon></span> -->
+          <ion-input  placeholder="Enter Your Registered Email" [(ngModel)]="loginmodel.email" type="email"></ion-input>
+        </ion-item>  
+      </div>
+
+      <ion-button class="login-btn" (click)="resetdetails(loginmodel)" >Reset</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="isShowPassword">
+    <ion-card-content>
+      {{userinfo.password}}
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

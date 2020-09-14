@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <!-- <ion-icon class="back-btn" slot="start" name="arrow-back-outline"></ion-icon> -->
+    <ion-title class="ion-title" >Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<h6 class="sign-in-heading">Plese login to continue.</h6>
+<form [formGroup]="loginForm">
+
+<div class="input-div">
+  <ion-item>
+    <span item-right><ion-icon name="mail"></ion-icon></span>
+    <ion-input class="input-email" formControlName="email" [(ngModel)]="loginmodel.email" placeholder="Email" type="email"></ion-input>
+  </ion-item>  
+</div>
+
+<div class="input-div">
+  <ion-item>
+    <span item-right><ion-icon name="lock-closed"></ion-icon></span>
+    <ion-input class="input-email" placeholder="Password" [(ngModel)]="loginmodel.password" formControlName="password" type="password"></ion-input>
+  </ion-item>  
+</div>
+
+<ion-button class="login-btn" [disabled]="loginForm.invalid" (click)="login(loginmodel)" >Login</ion-button>
+</form>
+
+<div>
+  <h6 class="forget-pass-heading">Forget Password?<a class="reset-link" (click)="forgotpassword()">Reset Here</a></h6>
+</div>
+
+<ion-button class="create-new-acc-btn"  (click)="createaccount()">Create New Account</ion-button>
+
+</ion-content>
+ 
