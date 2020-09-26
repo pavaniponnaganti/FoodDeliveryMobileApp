@@ -3,6 +3,7 @@
 
 /** Ionic CSS Variables **/
 :root {
+  --color-selected:red;
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -186,7 +187,9 @@
 
     --ion-card-background: #1c1c1d;
   }
-
+  :host{
+    --ripple-color : red!important;
+  }
 
   /*
    * Material Design Dark Theme

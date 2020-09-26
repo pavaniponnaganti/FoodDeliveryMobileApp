@@ -35,6 +35,47 @@ const routes: Routes = [
     path: 'dashboard-page',
     loadChildren: () => import('./Modules/Pages/dashboard-page/dashboard-page.module').then( m => m.DashboardPagePageModule)
   },
+  {
+    path: 'nearest-page',
+    loadChildren: () => import('./Modules/Pages/nearest-page/nearest-page.module').then( m => m.NearestPagePageModule)
+  },
+  {
+    path: 'cart-page',
+    loadChildren: () => import('./Modules/Pages/cart-page/cart-page.module').then( m => m.CartPagePageModule)
+  },
+  {
+    path: 'profile-page',
+    loadChildren: () => import('./Modules/Pages/profile-page/profile-page.module').then( m => m.ProfilePagePageModule)
+  },
+  {
+    path: 'language-page',
+    loadChildren: () => import('./Modules/Pages/language-page/language-page.module').then( m => m.LanguagePagePageModule)
+  },
+  {
+    path: 'myaccount-page',
+    loadChildren: () => import('./Modules/Pages/myaccount-page/myaccount-page.module').then( m => m.MyaccountPagePageModule)
+  },
+  {
+    path: 'myorders-page',
+    loadChildren: () => import('./Modules/Pages/myorders-page/myorders-page.module').then( m => m.MyordersPagePageModule)
+  },
+  {
+    path: 'about-page',
+    loadChildren: () => import('./Modules/Pages/about-page/about-page.module').then( m => m.AboutPagePageModule)
+  },
+  {
+    path: 'how-works-page',
+    loadChildren: () => import('./Modules/Pages/how-works-page/how-works-page.module').then( m => m.HowWorksPagePageModule)
+  },
+  {
+    path: 'faqs-page',
+    loadChildren: () => import('./Modules/Pages/faqs-page/faqs-page.module').then( m => m.FaqsPagePageModule)
+  },
+  {
+    path: 'contact-page',
+    loadChildren: () => import('./Modules/Pages/contact-page/contact-page.module').then( m => m.ContactPagePageModule)
+  },
+  
 ];
 
 @NgModule({

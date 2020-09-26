@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-icon class="back-btn" slot="start" name="arrow-back-outline" (click)="backbtnclick()"></ion-icon>
+    <ion-title>Language</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchKey" (ionChange)="changeFunction($event.target.value)" (ionClear)="onCancel($event)" ></ion-searchbar>
+  
+  <ion-list>
+    <ion-radio-group >     
+      <ion-item *ngFor="let item of languageList">
+        <ion-label>{{item.name}}</ion-label>
+        <ion-radio slot="start" color="danger" value="{{item.name}}"></ion-radio>
+      </ion-item>
+      
+    </ion-radio-group>
+  </ion-list>
+  <ion-button class="login-btn" (click)="navigationdashboard()">Update</ion-button>
+</ion-content>

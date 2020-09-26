@@ -146,7 +146,7 @@
         line-height: 25px;;
       }
     }
-
+    
   .serachbar-text{
         margin-left: 10px;
         font-size: 12px;
@@ -166,5 +166,29 @@
         top: 130px;
         z-index: 111;
       }
+
+  .tab-selected{
+    color: var(--ion-color-danger) ;
+  }
+  ion-tab-button{
+    --ripple-color : red!important;
+  }
+
+  .sidemenu_part{
+    //background: url(./assets/tiimeliineimg.jpg);
+    height: 200px;
+  }
+
+  .side-menu-icons{
+    font-size: 12px;
+  }
+  .side-menu-label{
+    margin-left: 25px !important;
+    font-size: 11px !important;
+  }
+
+  ion-item {
+    --min-height: 16px;
+  }
 
   

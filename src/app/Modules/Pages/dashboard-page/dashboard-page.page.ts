@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard-page',
@@ -7,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardPagePage implements OnInit {
 
-  constructor() { }
+  constructor(private route:Router) { }
 
   images= ['welcomeSlide1.jpg','welcomeSlide1.jpg', 'welcomeSlide1.jpg','welcomeSlide1.jpg'];
   ngOnInit() {
+  }
+
+  backbuttonclick(){
+    this.route.navigateByUrl('select-city-page');
   }
 
 }
